@@ -7,7 +7,6 @@ import { Section } from '@/components/ui/section'
 import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { RESUME_DATA } from '@/data/resume-data'
-import { ProjectCard } from '@/components/project-card'
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -159,6 +158,51 @@ export default function Page() {
           })}
         </Section>
         <Section>
+          <h2 className="text-xl font-bold">Academic Projects</h2>
+          {RESUME_DATA.projects.map(project => {
+            return (
+              <Card key={project.title}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none">
+                      {project.title}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {project.year}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2">{project.institute}</CardContent>
+                <CardContent className="mt-2 text-xs">
+                  {project.description}
+                </CardContent>
+              </Card>
+            )
+          })}
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Certifications</h2>
+          {RESUME_DATA.certifications.map(certification => {
+            return (
+              <Card key={certification.title}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none">
+                      {certification.title}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {certification.year}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2">
+                  {certification.institute}
+                </CardContent>
+              </Card>
+            )
+          })}
+        </Section>
+        <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map(skill => {
@@ -167,7 +211,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
+        {/* <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map(project => {
@@ -182,7 +226,7 @@ export default function Page() {
               )
             })}
           </div>
-        </Section>
+        </Section> */}
       </section>
 
       <CommandMenu

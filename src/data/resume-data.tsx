@@ -9,14 +9,14 @@ export const RESUME_DATA = {
   initials: 'DG',
   location: 'Noida, Uttar Pradesh, India',
   locationLink: 'https://www.google.com/maps/place/Noida',
-  about: 'MBA Student',
+  about: "MBA FSM'24 | BCA BVP'22",
   summary:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  avatarUrl: '',
+    'As a dynamic professional with a multifaceted background, I bring a unique blend of financial expertise and hands-on technology experience. With a MBA, specializing in Finance, I have honed my skills in financial analysis & modeling. My proficiency in programming, acquired through extensive web development projects, serves as a valuable asset as I pursue a career transition into quant research. I am excited about leveraging my programming skills to analyze and interpret financial data, employing quantitative methods to derive meaningful insights. My ability to bridge the worlds of finance and technology positions me as a versatile candidate ready to contribute innovative solutions to the field of quantitative research. Eager to apply my analytical acumen, financial knowledge, and development experience, I am poised to excel in the dynamic and challenging realm of quant research.',
+  avatarUrl: 'https://avatars.githubusercontent.com/u/86593279?v=4',
   personalWebsiteUrl: 'https://dhruvgursahani.vercel.app',
   contact: {
-    email: 'dhruv.gursahani@xyz.com',
-    tel: '+91-0000000000',
+    email: 'dhruv.gursahani@outlook.com',
+    tel: '+91-9999819773',
     social: [
       {
         name: 'GitHub',
@@ -38,28 +38,28 @@ export const RESUME_DATA = {
   education: [
     {
       school: 'FORE School of Management',
-      degree: 'Master of Business Administration',
+      degree: 'Master of Business Administration -- 7.32/10',
       start: '2022',
       end: '2024'
     },
     {
-      school: 'Bharati Vidyapeeth Institute of Management and Research (BVIMR)',
-      degree: 'Bachelor of Computer Applications',
+      school: 'Bharati Vidyapeeth Institute of Management and Research',
+      degree: 'Bachelor of Computer Applications -- 9.33/10',
       start: '2019',
       end: '2022'
     },
     {
       school: 'Bhatnagar International School',
-      degree: 'Class XII (C.B.S.E)',
+      degree: 'Class XII (C.B.S.E) -- 91%',
       start: '2018',
       end: '2019'
-    },
-    {
+    }
+    /* {
       school: 'Bhatnagar International School',
-      degree: 'Class X (C.B.S.E)',
+      degree: 'Class X (C.B.S.E) -- 78%',
       start: '2016',
       end: '2017'
-    }
+    } */
   ],
   work: [
     {
@@ -70,7 +70,8 @@ export const RESUME_DATA = {
       logo: Corizo,
       start: 'May 2023',
       end: 'Jun 2023',
-      description: 'XYZ'
+      description:
+        'Ongoing monitoring and analysis of pipeline to review performance & optimize accordingly, to ensure objectives are met. Updated & created tailored client proposals and negotiated further to close the deals. Developed a strong pipeline of new customers through direct or indirect customer contact and prospecting.'
     },
     {
       company: 'Self Employed',
@@ -80,256 +81,105 @@ export const RESUME_DATA = {
       logo: selfEmp,
       start: '2021',
       end: '2022',
-      description: 'XYZ'
+      description:
+        'Worked with clients to gather requirements, design solutions, and deliver custom web applications on time and within budget.Stayed up-to-date with the latest web development technologies and best practices to ensure high-quality and cutting-edge web applications.'
     }
   ],
   skills: [
-    'JavaScript',
-    'TypeScript',
-    'React/Next.js/Remix',
+    '#finance',
+    'Financial Analysis',
+    'Discounted Cash Flow Model',
+    'Leveraged Buyout',
+    'Financial Derivatives',
+    'Portfolio Management',
+    'Financial Engineering',
+    'Tableau',
+    'MS-Excel',
+    'Corporate Finance',
+    'Portfolio Optimization',
+    '#dev',
+    'Python',
+    'Sckit-Learn',
+    'Machine Learning',
+    'Deep Learning',
+    'Javascript',
     'Node.js',
-    'GraphQL',
-    'Relay',
-    'WebRTC'
+    'Java',
+    'C#',
+    'Data Structures and Algorithms'
   ],
   projects: [
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Emerging Technologies in Indian Edu-Tech',
+      institute: 'FORE School of Management',
+      year: '2023',
+      description:
+        'A work in progress research paper that is based on my summer internship project of the same name. The objectives were to explore the factors that influence the potential of emerging technologies in Indian Edu tech context and create a heirarchical relation between them.'
     },
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Electronica: E-Commerce Website',
+      institute: 'Bharati Vidyapeeth',
+      year: '2022',
+      description:
+        'As part of major project to be submitted during my graduation, me and my team developed this website using MERN Stack and Stripe as Payment Processor'
     },
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Gym Management System (JavaFx)',
+      institute: 'Bharati Vidyapeeth',
+      year: '2021',
+      description:
+        'As part of minor project to be submitted during my graduation, me and my team developed this Desktop application using JavaFx and MySQL as database'
+    }
+  ],
+  certifications: [
+    {
+      title: 'Financial Modeling: Build a complete DCF Valuation Model',
+      year: '2023',
+      institute: 'Udemy'
     },
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Python for Data Science, AI, and Development',
+      year: '2023',
+      institute: 'IBM'
     },
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Financial Derivatives: A quantitative finance view',
+      year: '2023',
+      institute: 'Udemy'
     },
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Machine Learning Specialization',
+      year: '2023',
+      institute: 'deeplearning.ai'
     },
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Microsoft Power BI Desktop for Business Intelligence',
+      year: '2022',
+      institute: 'Udemy'
     },
     {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
-    },
-    {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
-    },
-    {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
-    },
-    {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
-    },
-    {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
-    },
-    {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
-    },
-    {
-      title: 'XYZ',
-      techStack: [
-        'Side Project',
-        'TypeScript',
-        'Next.js',
-        'Vite',
-        'GraphQL',
-        'WebRTC'
-      ],
-      description: 'ABC',
-      logo: '',
-      link: {
-        label: 'xyz.com',
-        href: 'https://xyz.com/'
-      }
+      title: 'Agile with Atlassian Jira',
+      year: '2022',
+      institute: 'Atlassian'
     }
   ]
+  /* projects: [
+    {
+      title: 'XYZ',
+      techStack: [
+        'Side Project',
+        'TypeScript',
+        'Next.js',
+        'Vite',
+        'GraphQL',
+        'WebRTC'
+      ],
+      description: 'ABC',
+      logo: '',
+      link: {
+        label: 'xyz.com',
+        href: 'https://xyz.com/'
+      }
+    },
+  ] */
 } as const
