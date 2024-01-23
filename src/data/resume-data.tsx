@@ -1,6 +1,8 @@
 import Corizo from '@/images/logos/corizo.png'
 import selfEmp from '@/images/logos/self-emp.png'
-import { Github, LinkedinIcon, XIcon } from 'lucide-react'
+import { GitHubIcon } from '@/components/icons/GitHubIcon'
+import { LinkedInIcon } from '@/components/icons/LinkedInIcon'
+import { XIcon } from '@/components/icons/XIcon'
 
 export const RESUME_DATA = {
   name: 'Dhruv Gursahani',
@@ -19,12 +21,12 @@ export const RESUME_DATA = {
       {
         name: 'GitHub',
         url: 'https://github.com/dhruv-bvpdev',
-        icon: Github
+        icon: GitHubIcon
       },
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/dhruvgursahani/',
-        icon: LinkedinIcon
+        icon: LinkedInIcon
       },
       {
         name: 'X',
