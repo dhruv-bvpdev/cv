@@ -5,12 +5,14 @@ import selfEmp from '../images/logos/self-emp.png'
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { PrintButton } from '@/components/print-button'
 import Link from 'next/link'
 
 const ResumeData = {
   name: 'Dhruv Gursahani',
   email: 'dhruv.gursahani@hey.com',
   about: 'MBA Student',
+  avatarUrl: '',
   contact: {
     email: 'dhruv.gursahani@hey.com',
     tel: '+91-0000000000',
@@ -61,14 +63,16 @@ const ResumeData = {
       title: 'Summer Intern',
       logo: Corizo,
       start: 'May 2023',
-      end: 'Jun 2023'
+      end: 'Jun 2023',
+      description: 'XYZ'
     },
     {
       company: 'Self Employed',
       title: 'Free-Lance Web Developer',
       logo: selfEmp,
       start: '2021',
-      end: '2022'
+      end: '2022',
+      description: 'XYZ'
     }
   ]
 } as const
@@ -77,14 +81,12 @@ const getResumeData = async () => {
   return ResumeData
 }
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default async function Home() {
   const resumeData = await getResumeData()
 
   return (
-    <main className="container mx-auto p-6">
-      <section className="w-full md:w-3/4 mx-auto bg-white p-6 space-y-12">
+    <main className="container mx-auto p-1 md:p-6 relative overflow-auto">
+      <section className="w-full max-w-3xl mx-auto bg-white p-6 space-y-12">
         <div className="flex items-center justify-between mb-6">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">{resumeData.name}</h1>
@@ -93,14 +95,14 @@ export default async function Home() {
             </p>
           </div>
 
-          <Avatar className="h-24 w-24">
-            <AvatarImage alt={resumeData.name} src="/placeholder-avatar.jpg" />
+          <Avatar className="h-28 w-28">
+            <AvatarImage alt={resumeData.name} src={resumeData.avatarUrl} />
             <AvatarFallback>BJ</AvatarFallback>
           </Avatar>
         </div>
         <section>
           <h2 className="text-xl font-bold mb-4">Summary</h2>
-          <p className="text-gray-600">{resumeData.about}</p>
+          <p className="text-gray-600 font-mono text-sm">{resumeData.about}</p>
         </section>
         <section className="flex flex-col min-h-0 gap-y-5">
           <h2 className="text-xl font-bold my-2">Work Experience</h2>
@@ -111,12 +113,15 @@ export default async function Home() {
                   <h3 className="text-lg font-semibold leading-none">
                     {work.company}
                   </h3>
-                  <div className="text-gray-500 align-middle">
+                  <h4 className="text-sm leading-none">{work.title}</h4>
+                  <div className="text-gray-500 text-sm">
                     {work.start} - {work.end}
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2">
-                  <p className="text-gray-600">{work.title}</p>
+                  <p className="text-gray-600 font-mono text-sm text-pretty">
+                    {work.description}
+                  </p>
                 </CardContent>
               </Card>
             )
@@ -162,6 +167,8 @@ export default async function Home() {
           </div>
         </section>
       </section>
+
+      <PrintButton />
     </main>
   )
 }
