@@ -1,101 +1,13 @@
-import Corizo from '../images/logos/corizo.png'
-import selfEmp from '../images/logos/self-emp.png'
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar'
 import { Card, CardHeader, CardContent } from '../components/ui/card'
 import { Badge } from '../components/ui/badge'
 import { CommandMenu } from '../components/command-menu'
 import { Metadata } from 'next'
 import { Section } from '../components/ui/section'
-import { Github, LinkedinIcon, MailIcon, PhoneIcon, XIcon } from 'lucide-react'
+import { MailIcon, PhoneIcon } from 'lucide-react'
 import { Button } from '../components/ui/button'
-
-const RESUME_DATA = {
-  name: 'Dhruv Gursahani',
-  initials: 'DG',
-  about: 'MBA Student',
-  summary:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  avatarUrl: '',
-  personalWebsiteUrl: 'https://dhruvgursahani.vercel.app',
-  contact: {
-    email: 'dhruv.gursahani@hey.com',
-    tel: '+91-0000000000',
-    social: [
-      {
-        name: 'GitHub',
-        url: 'https://github.com/',
-        icon: Github
-      },
-      {
-        name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/dhruvgursahani/',
-        icon: LinkedinIcon
-      },
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com/dhruv_gursahani',
-        icon: XIcon
-      }
-    ]
-  },
-  education: [
-    {
-      school: 'FORE School of Management',
-      degree: 'Master of Business Administration',
-      start: '2022',
-      end: '2024'
-    },
-    {
-      school: 'Bharati Vidyapeeth Institute of Management and Research (BVIMR)',
-      degree: 'Bachelor of Computer Applications',
-      start: '2019',
-      end: '2022'
-    },
-    {
-      school: 'Bhatnagar International School',
-      degree: 'Class XII (C.B.S.E)',
-      start: '2018',
-      end: '2019'
-    },
-    {
-      school: 'Bhatnagar International School',
-      degree: 'Class X (C.B.S.E)',
-      start: '2016',
-      end: '2017'
-    }
-  ],
-  work: [
-    {
-      company: 'Corizo',
-      link: 'https://corizo.in',
-      badges: ['Bangalore'],
-      title: 'Summer Intern',
-      logo: Corizo,
-      start: 'May 2023',
-      end: 'Jun 2023',
-      description: 'XYZ'
-    },
-    {
-      company: 'Self Employed',
-      link: '',
-      badges: ['Remote'],
-      title: 'Free-Lance Web Developer',
-      logo: selfEmp,
-      start: '2021',
-      end: '2022',
-      description: 'XYZ'
-    }
-  ],
-  skills: [
-    'JavaScript',
-    'TypeScript',
-    'React/Next.js/Remix',
-    'Node.js',
-    'GraphQL',
-    'Relay',
-    'WebRTC'
-  ]
-} as const
+import { RESUME_DATA } from '../data/resume-data'
+import { ProjectCard } from '../components/project-card'
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -160,7 +72,7 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">Summary</h2>
+          <h2 className="text-xl font-bold">About</h2>
           <p className="text-muted-foreground font-mono text-sm text-pretty">
             {RESUME_DATA.summary}
           </p>
@@ -230,6 +142,23 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map(skill => {
               return <Badge key={skill}>{skill}</Badge>
+            })}
+          </div>
+        </Section>
+
+        <Section className="print-force-new-page scroll-mb-16">
+          <h2 className="text-xl font-bold">Projects</h2>
+          <div className="grid grid-cols-1 gap-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3 -mx-3 print:grid-cols-3">
+            {RESUME_DATA.projects.map(project => {
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  tags={project.techStack}
+                  link={'link' in project ? project.link.href : undefined}
+                />
+              )
             })}
           </div>
         </Section>
