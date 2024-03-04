@@ -16,7 +16,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: 'https://dhruvgursahani.vercel.app',
   contact: {
     email: 'dhruv.gursahani@outlook.com',
-    tel: '+91-9999819773',
+    tel: '',
     social: [
       {
         name: 'GitHub',
